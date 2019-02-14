@@ -1,0 +1,40 @@
+<form [formGroup]="qualificacaoEmpresaForm" class="qualificacao-empresa">
+  <div class="qualificacao-empresa__fields">
+    <mat-form-field>
+      <input matInput placeholder="Razão Social" formControlName="razaoSocial" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Ramo de Atividade" formControlName="ramoAtividade" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Data da Constituição" formControlName="dataConstituicao" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Natureza Jurídica" formControlName="naturezaJuridica" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="CNPJ" formControlName="cnpj" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Faturamento dos últimos 12 meses" formControlName="faturamento" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Patrimônio Líquido" formControlName="patrimonioLiquido" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Quantidade de Funcionários" formControlName="quantidadeFuncionarios" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="CNAE" formControlName="cnae" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Administradores" formControlName="administradores" required>
+    </mat-form-field>
+  </div>
+  <div class="qualificacao-empresa__actions">
+    <button mat-raised-button matStepperNext color="primary">
+      Continuar
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</form>
