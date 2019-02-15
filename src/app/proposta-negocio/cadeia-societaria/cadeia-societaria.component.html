@@ -1,0 +1,32 @@
+<form [formGroup]="cadeiaSocietariaForm" class="cadeia-societaria">
+  <div class="cadeia-societaria__fields">
+    <mat-form-field>
+      <input matInput placeholder="Nome/razão social" formControlName="razaoSocialNome" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="CPF/CNPJ" formControlName="cpfCnpj" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="% de participação" formControlName="percenParticipacao" required>
+    </mat-form-field>
+    <div class="cadeia-societaria__field-group">
+      <mat-form-field class="cadeia-societaria__field-group_field">
+        <input matInput placeholder="PEP" formControlName="pep" required>
+      </mat-form-field>
+      <button mat-stroked-button color="primary" class="cadeia-societaria__field-group_field_action">Dados</button>
+    </div>
+    <mat-form-field>
+      <input matInput placeholder="FATCA(Foreign Account Tax Compliance Act) " formControlName="cpfCnpj" required>
+    </mat-form-field>
+  </div>
+  <div class="cadeia-societaria__actions">
+    <button mat-raised-button matStepperPrevious color="primary">
+      <mat-icon>chevron_left</mat-icon>
+      Voltar
+    </button>
+    <button mat-raised-button matStepperNext color="primary">
+      Continuar
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</form>

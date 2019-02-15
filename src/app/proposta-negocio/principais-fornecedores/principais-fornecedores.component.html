@@ -1,0 +1,24 @@
+<form [formGroup]="principaisFornecedoresForm" class="principais-fornecedores">
+  <div class="principais-fornecedores__fields">
+    <mat-form-field>
+      <input matInput placeholder="Nome do Fornecedor" formControlName="nomeFornecedor" required>
+    </mat-form-field>
+    <div class="principais-fornecedores__field-group">
+      <mat-form-field class="principais-fornecedores__field-group_field">
+        <input matInput placeholder="% de participação no faturamento" formControlName="partCompras" required>
+      </mat-form-field>
+      <button mat-stroked-button color="primary"
+        class="principais-fornecedores__field-group_field_action">Adicionar</button>
+    </div>
+  </div>
+  <div class="principais-fornecedores__actions">
+    <button mat-raised-button matStepperPrevious color="primary">
+      <mat-icon>chevron_left</mat-icon>
+      Voltar
+    </button>
+    <button mat-raised-button matStepperNext color="primary">
+      Continuar
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</form>

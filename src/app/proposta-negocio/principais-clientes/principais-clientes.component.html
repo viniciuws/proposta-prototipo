@@ -1,0 +1,24 @@
+<form [formGroup]="principaisClientesForm" class="principais-clientes">
+  <div class="principais-clientes__fields">
+    <mat-form-field>
+      <input matInput placeholder="Nome do Cliente" formControlName="nomeCliente" required>
+    </mat-form-field>
+    <div class="principais-clientes__field-group">
+      <mat-form-field class="principais-clientes__field-group_field" >
+        <input matInput placeholder="% de participação no faturamento" formControlName="partFaturamento" required>
+      </mat-form-field>
+      <button mat-stroked-button color="primary" class="principais-clientes__field-group_field_action">Adicionar</button>
+    </div>
+
+  </div>
+  <div class="principais-clientes__actions">
+    <button mat-raised-button matStepperPrevious color="primary">
+      <mat-icon>chevron_left</mat-icon>
+      Voltar
+    </button>
+    <button mat-raised-button matStepperNext color="primary">
+      Continuar
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</form>

@@ -1,0 +1,21 @@
+.principais-clientes {
+    &__fields {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+    }
+    &__field-group {
+        &_field {
+            width: 70%;
+            margin-right: 30px;
+        }
+        &_action {
+            width: 30%;
+        }
+    }
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+    }
+}
