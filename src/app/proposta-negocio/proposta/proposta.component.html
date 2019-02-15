@@ -1,0 +1,67 @@
+<form [formGroup]="propostaForm" class="proposta">
+  <mat-card class="proposta__card">
+    <label>Proposta de negócio</label>
+    <div class="proposta__fields">
+      <mat-form-field>
+        <input matInput placeholder="Operação" formControlName="operacao" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Valor do empréstimo" formControlName="valorEmprestimo" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Prazo" formControlName="prazo" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Parcelas" formControlName="parcelas" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Periodicidade" formControlName="periodicidade" required>
+      </mat-form-field>
+    </div>
+  </mat-card>
+
+  <mat-card class="proposta__card">
+    <label>Garantias</label>
+    <div class="proposta__fields">
+      <div class="proposta__field-group">
+        <mat-form-field class="proposta__field-group_field">
+          <input matInput placeholder="Tipo Garantia" formControlName="tipoGarantia" required>
+        </mat-form-field>
+        <button class="proposta__field-group_action" mat-raised-button color="primary" (click)="openDialog()">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-card>
+
+  <mat-card class="proposta__card" *ngIf="isShow">
+    <label>Duplicata</label>
+    <div class="proposta__fields">
+      <mat-form-field>
+        <input matInput placeholder="% Sobre o valor da operação" formControlName="duplicataValorOperacao" required>
+      </mat-form-field>
+       <mat-form-field>
+        <input matInput placeholder="% Concentração por sacado" formControlName="duplicataSacado" required>
+      </mat-form-field>
+    </div>
+  </mat-card>
+
+  <mat-card class="proposta__card" *ngIf="isShow">
+    <label>Recebíveis</label>
+    <div class="proposta__fields">
+      <mat-form-field>
+        <input matInput placeholder="% Sobre o valor da operação" formControlName="recebiveisValorOperacao" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="% Concentração por sacado" formControlName="recebiveisSacado" required></textarea>
+      </mat-form-field>
+    </div>
+  </mat-card>
+
+  <div class="proposta__actions">
+    <button mat-raised-button matStepperNext color="primary">
+      Continuar
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</form>

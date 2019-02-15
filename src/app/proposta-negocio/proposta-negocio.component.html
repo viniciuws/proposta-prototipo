@@ -1,6 +1,10 @@
 <mat-toolbar color="primary" class="proposta-negocio">Proposta de Negócio PJ</mat-toolbar>
 
 <mat-horizontal-stepper class="proposta-negocio__stepper" [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="propostaForm">
+    <ng-template matStepLabel>Proposta</ng-template>
+    <app-proposta></app-proposta>
+  </mat-step>
   <mat-step [stepControl]="qualificacaoEmpresaForm">
     <ng-template matStepLabel>Qualificação da Empresa</ng-template>
     <app-qualificacao-empresa></app-qualificacao-empresa>

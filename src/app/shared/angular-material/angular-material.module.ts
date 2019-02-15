@@ -17,6 +17,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatDialogModule } from '@angular/material';
 
 @NgModule({
   exports: [
@@ -38,6 +39,7 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatCheckboxModule,
     MatSelectModule,
     MatStepperModule,
+    MatDialogModule,
   ]
 })
 export class AngularMaterialModule { }
