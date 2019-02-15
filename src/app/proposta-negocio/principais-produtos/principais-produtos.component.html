@@ -7,26 +7,19 @@
       <mat-form-field class="principais-produtos__field-group_field">
         <input matInput placeholder="% de participação no faturamento" formControlName="partFaturamento" required>
       </mat-form-field>
-      <button mat-stroked-button color="primary"
-        class="principais-produtos__field-group_field_action">Adicionar</button>
+      <button mat-raised-button color="primary" class="principais-produtos__field-group_field_action">
+        <mat-icon>add</mat-icon>
+      </button>
     </div>
   </div>
   <div class="principais-produtos__actions">
-    <button mat-raised-button matStepperPrevious color="primary">
+    <button mat-raised-button matStepperPrevious color="accent">
       <mat-icon>chevron_left</mat-icon>
       Voltar
     </button>
-    <button mat-raised-button  color="primary">
-      <mat-icon>attach_file</mat-icon>
-      Incluir Documentos
-    </button>
-    <button mat-raised-button  color="primary">
-      <mat-icon>save_alt</mat-icon>
-      Gravar
-    </button>
-    <button mat-raised-button color="primary">
-      <mat-icon>send</mat-icon>
-      Enviar Proposta
+    <button mat-raised-button matStepperNext color="accent">
+      Continuar
+      <mat-icon>chevron_right</mat-icon>
     </button>
   </div>
 </form>

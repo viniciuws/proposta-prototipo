@@ -1,12 +1,11 @@
-<mat-toolbar color="primary" class="proposta-negocio">Proposta de Negócio PJ</mat-toolbar>
+<mat-toolbar color="primary" class="proposta-negocio">
+  <img src="../../assets/images/ic_logo_light.svg" alt="">
+  <label> Proposta de Negócio PJ</label>
+</mat-toolbar>
 
 <mat-horizontal-stepper class="proposta-negocio__stepper" #stepper>
-  <mat-step>
-    <ng-template matStepLabel>Proposta</ng-template>
-    <app-proposta></app-proposta>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Qualificação da Empresa</ng-template>
+  <mat-step matTooltip="Qualificação da Empresa">
+    <ng-template matStepLabel >Qualificação da Empresa</ng-template>
     <app-qualificacao-empresa></app-qualificacao-empresa>
   </mat-step>
   <mat-step>
@@ -28,5 +27,9 @@
   <mat-step>
     <ng-template matStepLabel>Principais Produtos</ng-template>
     <app-principais-produtos></app-principais-produtos>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Proposta</ng-template>
+    <app-proposta></app-proposta>
   </mat-step>
 </mat-horizontal-stepper>
