@@ -1,0 +1,21 @@
+.cadeia-societaria {
+    &__fields{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+    }
+    &__field-group{
+        &_field{
+            width: 75%;
+            margin-right: 10px;
+        }
+        &_action{
+            width: 20%;
+        }
+    }
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+    }
+}

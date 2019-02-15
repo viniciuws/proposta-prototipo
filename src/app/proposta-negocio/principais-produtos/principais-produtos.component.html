@@ -1,0 +1,32 @@
+<form [formGroup]="principaisProdutosForm" class="principais-produtos">
+  <div class="principais-produtos__fields">
+    <mat-form-field>
+      <input matInput placeholder="Nome do produto" formControlName="nomeProduto" required>
+    </mat-form-field>
+    <div class="principais-produtos__field-group">
+      <mat-form-field class="principais-produtos__field-group_field">
+        <input matInput placeholder="% de participação no faturamento" formControlName="partFaturamento" required>
+      </mat-form-field>
+      <button mat-stroked-button color="primary"
+        class="principais-produtos__field-group_field_action">Adicionar</button>
+    </div>
+  </div>
+  <div class="principais-produtos__actions">
+    <button mat-raised-button matStepperPrevious color="primary">
+      <mat-icon>chevron_left</mat-icon>
+      Voltar
+    </button>
+    <button mat-raised-button  color="primary">
+      <mat-icon>attach_file</mat-icon>
+      Incluir Documentos
+    </button>
+    <button mat-raised-button  color="primary">
+      <mat-icon>save_alt</mat-icon>
+      Gravar
+    </button>
+    <button mat-raised-button color="primary">
+      <mat-icon>send</mat-icon>
+      Enviar Proposta
+    </button>
+  </div>
+</form>
