@@ -1,0 +1,29 @@
+<form [formGroup]="alienacaoBensForm" class="alienacao-bens">
+    <label>Alienação dos Bens</label>
+<div class="alienacao-bens__fields">
+  <mat-form-field>
+      <input matInput placeholder="Tipo de Máquina" formControlName="tipoMaquina" required>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Fabricante" formControlName="fabricante" required>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Modelo" formControlName="modelo" required>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Versão" formControlName="versao" required>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Ano Fabricação" formControlName="anoFabricacao" required>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Cotação" formControlName="cotacao" required>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Valor do Bem" formControlName="valorBem" required>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Tipo do Bem" formControlName="tipoBem" required>
+  </mat-form-field>
+</div>
+</form>
