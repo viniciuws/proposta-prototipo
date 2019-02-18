@@ -1,9 +1,28 @@
 .endereco-comercial {
+  &__card {
+    margin: 1em 0 1em 0;
+  }
+  & label {
+    font-weight: 500;
+  }
   &__fields {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
     grid-column-gap: 1em;
     grid-row-gap: 1em;
+  }
+  &__field-group {
+    &_ddd {
+      width: 20%;
+      margin-right: 1em;
+    }
+    &_telefone {
+      width: 75%
+    }
+    &_field {
+      width: 50%;
+      margin-right: 1em;
+    }
   }
   &__actions {
     display: flex;
