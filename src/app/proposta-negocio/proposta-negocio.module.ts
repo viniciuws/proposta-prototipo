@@ -10,6 +10,8 @@ import { CadeiaSocietariaComponent } from './cadeia-societaria/cadeia-societaria
 import { PrincipaisClientesComponent } from './principais-clientes/principais-clientes.component';
 import { PrincipaisFornecedoresComponent } from './principais-fornecedores/principais-fornecedores.component';
 import { PrincipaisProdutosComponent } from './principais-produtos/principais-produtos.component';
+import { VeiculoComponent } from './proposta/veiculo/veiculo.component';
+import { AlienacaoBensComponent } from './proposta/alienacao-bens/alienacao-bens.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { PrincipaisProdutosComponent } from './principais-produtos/principais-pr
     CadeiaSocietariaComponent,
     PrincipaisClientesComponent,
     PrincipaisFornecedoresComponent,
-    PrincipaisProdutosComponent
+    PrincipaisProdutosComponent,
+    VeiculoComponent,
+    AlienacaoBensComponent
   ],
   imports: [
     CommonModule,
