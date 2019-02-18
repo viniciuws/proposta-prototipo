@@ -54,9 +54,18 @@
           <input matInput placeholder="% Sobre o valor da operação" formControlName="recebiveisValorOperacao" required>
         </mat-form-field>
         <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="% Concentração por sacado" formControlName="recebiveisSacado" required></textarea>
+          <textarea matInput placeholder="% Concentração por sacado" formControlName="recebiveisSacado"
+            required></textarea>
         </mat-form-field>
       </div>
+    </mat-card>
+
+    <mat-card class="proposta__card" *ngIf="isShow">
+      <app-veiculo></app-veiculo>
+    </mat-card>
+
+    <mat-card class="proposta__card" *ngIf="isShow">
+      <app-alienacao-bens></app-alienacao-bens>
     </mat-card>
   </section>
   <section class="proposta__footer">
