@@ -25,12 +25,14 @@
       <mat-form-field>
         <input matInput placeholder="Cidade" formControlName="cidade" required>
       </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Estado" formControlName="estado" required>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="País" formControlName="pais" required>
-      </mat-form-field>
+      <div class="endereco-comercial__field-group">
+        <mat-form-field class="endereco-comercial__field-group_field">
+          <input matInput placeholder="Estado" formControlName="estado" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="País" formControlName="pais" required>
+        </mat-form-field>
+      </div>
       <div class="endereco-comercial__field-group">
         <mat-form-field class="endereco-comercial__field-group_ddd">
           <input matInput placeholder="DDD" formControlName="ddd" required>
