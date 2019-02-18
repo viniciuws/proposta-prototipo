@@ -1,11 +1,41 @@
 .proposta-negocio {
+  display: flex;
+  justify-content: flex-start;
+  &__container {
+    height: 80vh;
+  }
+  &__stepper {
+    padding: 0.5em 0 0 0;
+    width: 240px;
+    &_number {
+     border-radius: 50%;
+     padding: 0px 5px;
+     background: #fff;
+     border: 1px solid;
+     text-align: center;
+    }
+    &_action {
+      color: #737373;
+      padding: 1em;
+      transition: background-color 0.5s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.10);
+        color: #EF6C00;
+      }
+      &:active {
+        transform: scale(0.99);
+        color: #EF6C00;
+      }
+    }
+    &_active {
+      color: #EF6C00;
+    }
+  }
   & img {
     width: 100px
   }
   & label {
     margin: 0 0 0 1em;
-  }
-  &__stepper {
-    margin: 1em 0 0 0;
   }
 }

@@ -3,33 +3,44 @@
   <label> Proposta de Negócio PJ</label>
 </mat-toolbar>
 
-<mat-horizontal-stepper class="proposta-negocio__stepper" #stepper>
-  <mat-step matTooltip="Qualificação da Empresa">
-    <ng-template matStepLabel >Qualificação da Empresa</ng-template>
-    <app-qualificacao-empresa></app-qualificacao-empresa>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Endereço Comercial</ng-template>
-    <app-endereco-comercial></app-endereco-comercial>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Cadeia Societária</ng-template>
-    <app-cadeia-societaria></app-cadeia-societaria>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Principais Clientes</ng-template>
-    <app-principais-clientes></app-principais-clientes>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Principais Fornecedores</ng-template>
-    <app-principais-fornecedores></app-principais-fornecedores>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Principais Produtos</ng-template>
-    <app-principais-produtos></app-principais-produtos>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Proposta</ng-template>
-    <app-proposta></app-proposta>
-  </mat-step>
-</mat-horizontal-stepper>
+<mat-drawer-container class="proposta-negocio__container">
+  <mat-drawer class="proposta-negocio__stepper" mode="side" opened>
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(1)" [ngClass]="{'proposta-negocio__stepper_active': passo === 1}">
+      <span class="proposta-negocio__stepper_number">1</span>
+      Qualificação da Empresa
+    </div>
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(2)" [ngClass]="{'proposta-negocio__stepper_active': passo === 2}">
+      <span class="proposta-negocio__stepper_number">2</span>
+      Endereço Comercial
+    </div>
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(3)" [ngClass]="{'proposta-negocio__stepper_active': passo === 3}">
+      <span class="proposta-negocio__stepper_number">3</span>
+      Cadeia Societária
+    </div>
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(4)" [ngClass]="{'proposta-negocio__stepper_active': passo === 4}">
+      <span class="proposta-negocio__stepper_number">4</span>
+      Principais Clientes
+    </div>
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(5)" [ngClass]="{'proposta-negocio__stepper_active': passo === 5}">
+      <span class="proposta-negocio__stepper_number">5</span>
+      Principais Fornecedores
+    </div>
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(6)" [ngClass]="{'proposta-negocio__stepper_active': passo === 6}">
+      <span class="proposta-negocio__stepper_number">6</span>
+      Principais Produtos
+    </div>
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(7)" [ngClass]="{'proposta-negocio__stepper_active': passo === 7}">
+      <span class="proposta-negocio__stepper_number">7</span>
+      Proposta
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-qualificacao-empresa *ngIf="passo === 1"></app-qualificacao-empresa>
+    <app-endereco-comercial *ngIf="passo === 2"></app-endereco-comercial>
+    <app-cadeia-societaria *ngIf="passo === 3"></app-cadeia-societaria>
+    <app-principais-clientes *ngIf="passo === 4"></app-principais-clientes>
+    <app-principais-fornecedores *ngIf="passo === 5"></app-principais-fornecedores>
+    <app-principais-produtos *ngIf="passo === 6"></app-principais-produtos>
+    <app-proposta *ngIf="passo === 7"></app-proposta>
+  </mat-drawer-content>
+</mat-drawer-container>
