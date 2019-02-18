@@ -33,6 +33,10 @@
       <span class="proposta-negocio__stepper_number">7</span>
       Proposta
     </div>
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(8)" [ngClass]="{'proposta-negocio__stepper_active': passo === 8}">
+      <span class="proposta-negocio__stepper_number">8</span>
+      Garantias
+    </div>
   </mat-drawer>
   <mat-drawer-content>
     <app-qualificacao-empresa *ngIf="passo === 1"></app-qualificacao-empresa>
@@ -42,5 +46,6 @@
     <app-principais-fornecedores *ngIf="passo === 5"></app-principais-fornecedores>
     <app-principais-produtos *ngIf="passo === 6"></app-principais-produtos>
     <app-proposta *ngIf="passo === 7"></app-proposta>
+    <app-garantias *ngIf="passo === 8"></app-garantias>
   </mat-drawer-content>
 </mat-drawer-container>
