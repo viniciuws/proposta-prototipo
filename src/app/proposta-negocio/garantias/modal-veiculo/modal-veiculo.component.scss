@@ -1,0 +1,22 @@
+.modal-veiculo {
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.veiculo {
+  &__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+  }
+
+  &__field-group {
+    &_field {
+      display: grid;
+      grid-template-columns: 0.5fr;
+    }
+  }
+}

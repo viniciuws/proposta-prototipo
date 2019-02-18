@@ -1,0 +1,46 @@
+<form [formGroup]="garantiaForm" class="garantia">
+  <section class="garantia__body">
+
+    <mat-card class="garantia__card">
+      <label>Garantias</label>
+      <div class="garantia__fields">
+        <div class="garantia__field-group">
+          <mat-form-field class="garantia__field-group_field">
+            <input matInput placeholder="Tipo Garantia" formControlName="tipoGarantia" required>
+          </mat-form-field>
+          <button class="garantia__field-group_action" mat-raised-button color="primary" (click)="openDialog()">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-card>
+
+    <mat-card class="proposta__card" *ngIf="isShow">
+      <app-veiculo></app-veiculo>
+    </mat-card>
+
+    <!-- <mat-card class="proposta__card" *ngIf="isShow">
+      <app-alienacao-bens></app-alienacao-bens>
+    </mat-card> -->
+  </section>
+  <section class="garantia__footer">
+    <div class="garantia__actions">
+      <!-- <button mat-raised-button matStepperPrevious color="accent">
+        <mat-icon>chevron_left</mat-icon>
+        Voltar
+      </button> -->
+      <button mat-raised-button color="accent">
+        <mat-icon>attach_file</mat-icon>
+        Incluir Documentos
+      </button>
+      <button mat-raised-button color="accent">
+        <mat-icon>save_alt</mat-icon>
+        Gravar
+      </button>
+      <button mat-raised-button color="accent">
+        <mat-icon>send</mat-icon>
+        Enviar Proposta
+      </button>
+    </div>
+  </section>
+</form>
