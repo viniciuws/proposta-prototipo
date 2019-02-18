@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropostaNegocioComponent implements OnInit {
 
+  passo = 1;
+
   constructor() { }
 
   ngOnInit() {}
+
+  goToStep(step): void {
+    this.passo = step;
+  }
 
 }
