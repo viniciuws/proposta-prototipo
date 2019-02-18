@@ -1,5 +1,11 @@
 .principais-produtos {
     margin: 2em;
+    &__card {
+        margin: 1em 0 1em 0;
+    }
+      & label {
+        font-weight: 500;
+    }
     &__fields {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -8,7 +14,7 @@
     }
     &__field-group {
         &_field {
-            width: 70%;
+            width: 40%;
             margin-right: 30px;
         }
         &_action {

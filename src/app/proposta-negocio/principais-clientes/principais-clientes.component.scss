@@ -1,22 +1,28 @@
 .principais-clientes {
-    margin: 2em;
-    &__fields {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 1em;
-        grid-row-gap: 1em;
+  margin: 2em;
+  &__card {
+      margin: 1em 0 1em 0;
+  }
+    & label {
+      font-weight: 500;
+  }
+  &__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+  }
+  &__field-group {
+    &_field {
+      width: 40%;
+      margin-right: 30px;
     }
-    &__field-group {
-        &_field {
-            width: 70%;
-            margin-right: 30px;
-        }
-        &_action {
-            width: 30%;
-        }
+      &_action {
+        width: 30%;
     }
-    &__actions {
-        display: flex;
-        justify-content: space-between;
-    }
+  }
+  &__actions {
+      display: flex;
+      justify-content: space-between;
+  }
 }
