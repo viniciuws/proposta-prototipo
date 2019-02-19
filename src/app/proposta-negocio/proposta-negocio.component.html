@@ -5,35 +5,43 @@
 
 <mat-drawer-container class="proposta-negocio__container">
   <mat-drawer class="proposta-negocio__stepper" mode="side" opened>
-    <div class="proposta-negocio__stepper_action" (click)="goToStep(1)" [ngClass]="{'proposta-negocio__stepper_active': passo === 1}">
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(1)"
+      [ngClass]="{'proposta-negocio__stepper_active': passo === 1}">
       <span class="proposta-negocio__stepper_number">1</span>
       Qualificação da Empresa
     </div>
-    <div class="proposta-negocio__stepper_action" (click)="goToStep(2)" [ngClass]="{'proposta-negocio__stepper_active': passo === 2}">
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(2)"
+      [ngClass]="{'proposta-negocio__stepper_active': passo === 2}">
       <span class="proposta-negocio__stepper_number">2</span>
       Endereço Comercial
     </div>
-    <div class="proposta-negocio__stepper_action" (click)="goToStep(3)" [ngClass]="{'proposta-negocio__stepper_active': passo === 3}">
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(3)"
+      [ngClass]="{'proposta-negocio__stepper_active': passo === 3}">
       <span class="proposta-negocio__stepper_number">3</span>
       Cadeia Societária
     </div>
-    <div class="proposta-negocio__stepper_action" (click)="goToStep(4)" [ngClass]="{'proposta-negocio__stepper_active': passo === 4}">
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(4)"
+      [ngClass]="{'proposta-negocio__stepper_active': passo === 4}">
       <span class="proposta-negocio__stepper_number">4</span>
       Principais Clientes
     </div>
-    <div class="proposta-negocio__stepper_action" (click)="goToStep(5)" [ngClass]="{'proposta-negocio__stepper_active': passo === 5}">
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(5)"
+      [ngClass]="{'proposta-negocio__stepper_active': passo === 5}">
       <span class="proposta-negocio__stepper_number">5</span>
       Principais Fornecedores
     </div>
-    <div class="proposta-negocio__stepper_action" (click)="goToStep(6)" [ngClass]="{'proposta-negocio__stepper_active': passo === 6}">
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(6)"
+      [ngClass]="{'proposta-negocio__stepper_active': passo === 6}">
       <span class="proposta-negocio__stepper_number">6</span>
       Principais Produtos
     </div>
-    <div class="proposta-negocio__stepper_action" (click)="goToStep(7)" [ngClass]="{'proposta-negocio__stepper_active': passo === 7}">
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(7)"
+      [ngClass]="{'proposta-negocio__stepper_active': passo === 7}">
       <span class="proposta-negocio__stepper_number">7</span>
       Proposta
     </div>
-    <div class="proposta-negocio__stepper_action" (click)="goToStep(8)" [ngClass]="{'proposta-negocio__stepper_active': passo === 8}">
+    <div class="proposta-negocio__stepper_action" (click)="goToStep(8)"
+      [ngClass]="{'proposta-negocio__stepper_active': passo === 8}">
       <span class="proposta-negocio__stepper_number">8</span>
       Garantias
     </div>
@@ -47,5 +55,16 @@
     <app-principais-produtos *ngIf="passo === 6"></app-principais-produtos>
     <app-proposta *ngIf="passo === 7"></app-proposta>
     <app-garantias *ngIf="passo === 8"></app-garantias>
+
+    <div class="proposta-negocio__actions" [ngClass]="{'proposta-negocio__actions_next': passo === 1}">
+      <button mat-raised-button color="accent" *ngIf="passo !== 1" (click)="backStep()">
+        <mat-icon>chevron_left</mat-icon>
+        Voltar
+      </button>
+      <button mat-raised-button color="accent" *ngIf="passo !== 8" (click)="goNextStep()">
+        Continuar
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
   </mat-drawer-content>
 </mat-drawer-container>
