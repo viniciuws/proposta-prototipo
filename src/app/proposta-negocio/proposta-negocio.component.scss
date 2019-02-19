@@ -4,6 +4,11 @@
   &__container {
     height: 90%;
   }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   &__stepper {
     padding: 0.5em 0 0 0;
     width: 240px;
