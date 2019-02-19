@@ -63,7 +63,7 @@ export class ModalVeiculoComponent implements OnInit {
   constructor(
     private _formBuilder: FormBuilder,
     public dialogRef: MatDialogRef<ModalVeiculoComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Veiculo
+    @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
 
   ngOnInit() {
