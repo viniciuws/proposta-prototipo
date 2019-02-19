@@ -11,10 +11,15 @@ export class PropostaNegocioComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   goToStep(step): void {
     this.passo = step;
   }
-
+  goNextStep() {
+    this.passo++;
+  }
+  backStep() {
+    this.passo--;
+  }
 }
