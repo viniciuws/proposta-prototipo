@@ -1,10 +1,11 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { Veiculo } from './veiculo/veiculo';
 
-export interface DialogData {
-  animal: string;
-  name: string;
+export interface TipoGarantia {
+  value: string;
+  viewValue: string;
 }
 
 @Component({
@@ -14,10 +15,17 @@ export interface DialogData {
 })
 export class GarantiasComponent implements OnInit {
 
+  tipoGarantias: TipoGarantia[] = [
+    // { value: 'alienacaoBens', viewValue: 'Alienação de Bens' },
+    // { value: 'duplicata', viewValue: 'Duplicata' },
+    // { value: 'recebiveis', viewValue: 'Recebíveis' },
+    { value: 'veiculo', viewValue: 'Veículo' }
+  ];
+
   garantiaForm: FormGroup;
   garantia: string;
   veiculoForm: FormGroup;
-  veiculo: {};
+  veiculo: Veiculo;
   name = 'Veículo';
   isShow = false;
 
@@ -25,11 +33,7 @@ export class GarantiasComponent implements OnInit {
 
   ngOnInit() {
     this.garantiaForm = this._formBuilder.group({
-      tipoGarantia: ['', Validators.required],
-      duplicataValorOperacao: ['', Validators.required],
-      duplicataSacado: ['', Validators.required],
-      recebiveisValorOperacao: ['', Validators.required],
-      recebiveisSacado: ['', Validators.required],
+      tipoGarantia: ['', Validators.required]
     });
   }
 
@@ -41,47 +45,10 @@ export class GarantiasComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       this.veiculo = result.value;
-      this.garantiaForm.controls['tipoGarantia'].setValue('Veículo');
       this.veiculo !== undefined ? this.isShow = true : this.isShow = false;
     });
   }
 
-}
-
-export interface Garantia {
-  value: string;
-  viewValue: string;
-}
-
-@Component({
-  selector: 'app-modal-garantia',
-  templateUrl: './modal-garantia/modal-garantia.component.html',
-  styleUrls: ['./modal-garantia/modal-garantia.component.scss']
-})
-export class ModalGarantiaComponent {
-
-  garantiaControl = new FormControl('', [Validators.required]);
-
-  garantias: Garantia[] = [
-    { value: 'garantia1', viewValue: 'Garantia 1' },
-    { value: 'garantia2', viewValue: 'Garantia 2' },
-    { value: 'garantia3', viewValue: 'Garantia 3' }
-  ];
-
-  constructor(
-    public dialogRef: MatDialogRef<ModalGarantiaComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) { }
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
-}
-
-export interface Veiculo {
-  value: string;
-  viewValue: string;
 }
 
 @Component({
@@ -93,16 +60,10 @@ export class ModalVeiculoComponent implements OnInit {
 
   veiculoForm: FormGroup;
 
-  veiculos: Veiculo[] = [
-    { value: 'garantia1', viewValue: 'Garantia 1' },
-    { value: 'garantia2', viewValue: 'Garantia 2' },
-    { value: 'garantia3', viewValue: 'Garantia 3' }
-  ];
-
   constructor(
     private _formBuilder: FormBuilder,
     public dialogRef: MatDialogRef<ModalVeiculoComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
+    @Inject(MAT_DIALOG_DATA) public data: Veiculo
   ) { }
 
   ngOnInit() {
