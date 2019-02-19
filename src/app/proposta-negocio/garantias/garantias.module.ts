@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMaterialModule } from './../../shared/angular-material/angular-material.module';
 import { AlienacaoBensComponent } from './alienacao-bens/alienacao-bens.component';
-import { ModalGarantiaComponent, ModalVeiculoComponent, GarantiasComponent } from './garantias.component';
+import { ModalVeiculoComponent, GarantiasComponent } from './garantias.component';
 import { VeiculoComponent } from './veiculo/veiculo.component';
 
 @NgModule({
@@ -11,7 +11,6 @@ import { VeiculoComponent } from './veiculo/veiculo.component';
     VeiculoComponent,
     AlienacaoBensComponent,
     GarantiasComponent,
-    ModalGarantiaComponent,
     ModalVeiculoComponent
   ],
   imports: [
@@ -24,7 +23,6 @@ import { VeiculoComponent } from './veiculo/veiculo.component';
     GarantiasComponent
   ],
   entryComponents: [
-    ModalGarantiaComponent,
     ModalVeiculoComponent
   ]
 })

@@ -39,7 +39,7 @@
     </mat-form-field>
     <div class="veiculo__field-group">
       <mat-form-field class="veiculo__field-group_field">
-        <input matInput placeholder="Placa" formControlName="" required>
+        <input matInput placeholder="Placa" formControlName="placa" required>
       </mat-form-field>
     </div>
     <div class="veiculo__field-group">
@@ -88,5 +88,5 @@
 </div>
 <div mat-dialog-actions class="modal-veiculo__actions">
   <button mat-button (click)="onNoClick()">Cancelar</button>
-  <button mat-raised-button color="primary" [mat-dialog-close]="veiculoForm" cdkFocusInitial>Ok</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="veiculoForm" [disabled]="veiculoForm.invalid" cdkFocusInitial>Ok</button>
 </div>
