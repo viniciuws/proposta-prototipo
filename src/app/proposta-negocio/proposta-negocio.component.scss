@@ -1,8 +1,12 @@
 .proposta-negocio {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  &__toolbar {
+    display: flex;
+    justify-content: flex-start;
+  }
   &__container {
-    height: 90%;
+    height: 90vh;
   }
   &__content {
     display: flex;
