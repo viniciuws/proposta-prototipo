@@ -1,0 +1,9 @@
+<h2 mat-dialog-title align="center">{{obterTitulo()}}</h2>
+<mat-dialog-content class="mat-typography" align="center">
+  <mat-icon>warning</mat-icon>
+  <h3>{{obterTexto()}}</h3>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button *ngIf="mostrarBotaoCancelar()" mat-button [mat-dialog-close]="false">{{obternomeBotaoCancelar()}}</button>
+  <button mat-raised-button class="background-green" [mat-dialog-close]="true" cdkFocusInitial>{{obternomeBotaoConfirmar()}}</button>
+</mat-dialog-actions>

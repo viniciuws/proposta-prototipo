@@ -1,3 +1,4 @@
+import { ModalService } from './../../shared/components/modal/modal.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,16 +10,22 @@ import { Component, OnInit } from '@angular/core';
 export class CadeiaSocietariaComponent implements OnInit {
 
   cadeiaSocietariaForm: FormGroup;
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private modalService: ModalService) { }
 
   ngOnInit() {
-    this.cadeiaSocietariaForm = this._formBuilder.group({
+    this.cadeiaSocietariaForm = this.formBuilder.group({
       razaoSocialNome: ['', Validators.required],
       cpfCnpj: ['', Validators.required],
       percenParticipacao: ['', Validators.required],
       pep: ['', Validators.required],
       fatca: ['', Validators.required]
     });
+  }
+
+  openModal() {
+    this.modalService.alertar('Alerta', 'TEXTO');
   }
 
 }
